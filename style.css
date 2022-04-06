@@ -14,7 +14,7 @@ body,
 
 body {
     font-family: sans-serif;
-    background-color: #f9fbfd;
+    background-color: powderblue;
 }
 
 .wrapper {
@@ -31,7 +31,7 @@ header {
 }
 
 .card {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(228, 33%, 49%);
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -88,9 +88,8 @@ header {
     align-self: hover orange;
 }
 
-button[disabled] {
-    cursor: default;
-    background: #c0c7cf;
+.btn:hover {
+    background-color: orange;
 }
 
 .float-right {
@@ -112,10 +111,11 @@ button[disabled] {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px dashed #c0c7cf;
+    border: 2px dashed black;
     border-radius: 6px;
     resize: none;
     overflow: hidden;
+    background-color: rgb(177, 197, 234);
 }
 
 @media (max-width: 690px) {

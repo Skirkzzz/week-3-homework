@@ -1,3 +1,6 @@
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
 // create an array of letters
 var ucChars = ['A', 'B', 'C'];
 var lcChars = ['a', 'b', 'c'];
@@ -27,6 +30,16 @@ if (hasUpper) {
 
 if (hasUpper) {
     masterArray.concat(specialChars);
+
+}
+
+// Write password to the #password input
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+
 }
 
 var newPassword = "";
@@ -35,3 +48,6 @@ for (var i = 0; i < passwordLength; i++) {
     var randomIndex = Math.floor(Math.random() * masterArray.length)
     newPassword += masterArray[randomIndex]
 }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
