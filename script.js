@@ -14,31 +14,38 @@ var hasSpecial = true;
 var passwordLength = 12;
 
 // create a master array of possible characters
+function generatePassword() {
+  var masterArray = [];
+  var passwordLength = prompt(
+    "How many characters would you like your password to be?"
+  );
 
-if (hasLower) {
-  masterArray.concat(lcChars);
+  var hasLower = confirm("Do you want lowercase letters?");
+  if (hasLower) {
+    masterArray = masterArray.concat(lcChars);
+  }
+
+  var hasLower = confirm("Do you want lowercase letters?");
+  if (hasUpper) {
+    masterArray.concat(ucChars);
+  }
+
+  if (hasUpper) {
+    masterArray.concat(numberChars);
+  }
+
+  if (hasUpper) {
+    masterArray.concat(specialChars);
+  }
+
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+  }
 }
-
-if (hasUpper) {
-  masterArray.concat(ucChars);
-}
-
-if (hasUpper) {
-  masterArray.concat(numberChars);
-}
-
-if (hasUpper) {
-  masterArray.concat(specialChars);
-}
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
 var newPassword = "";
 
 for (var i = 0; i < passwordLength; i++) {
