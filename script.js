@@ -37,8 +37,8 @@ function generatePassword() {
   if (hasSpecial) {
     masterArray = masterArray.concat(specialChars);
   }
-//code to create password and iterate through the logic
-  var = newPassword = "";
+  //code to create password and iterate through the logic
+  var newPassword = "";
   console.log(masterArray);
   for (var i = 0; i < passwordLength; i++) {
     var randomIndex = Math.floor(Math.random() * masterArray.length);
@@ -46,14 +46,13 @@ function generatePassword() {
   }
 }
 
-  // Write password to the #password input
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-    passwordText.value = password;
-  }
-
+  passwordText.value = password;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
