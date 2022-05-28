@@ -44,6 +44,7 @@ function generatePassword() {
     var randomIndex = Math.floor(Math.random() * masterArray.length);
     newPassword += masterArray[randomIndex];
   }
+  return newPassword;
 }
 
 // Write password to the #password input
