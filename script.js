@@ -2,10 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 
 // create an array of letters
-var ucChars = ["A", "B", "C"];
-var lcChars = ["a", "b", "c"];
-var numberChars = ["1", "2", "3"];
-var specialChars = ["%", "&", "^"];
+var ucChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var lcChars = "abcdefghijklmnopqrstuvwxyz".split("");
+var numberChars = "123456789".split("");
+var specialChars = "!£$%^&*()@~:;,./?{}=-_".split("");
 
 var hasUpper = true;
 var hasLower = false;
