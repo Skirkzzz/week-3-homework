@@ -25,18 +25,26 @@ function generatePassword() {
     masterArray = masterArray.concat(lcChars);
   }
 
-  var hasLower = confirm("Do you want lowercase letters?");
+  var hasUpper = confirm("Do you want uppercase letters?");
   if (hasUpper) {
-    masterArray.concat(ucChars);
+    masterArray = masterArray.concat(ucChars);
   }
-
-  if (hasUpper) {
-    masterArray.concat(numberChars);
+  var hasNumbers = confirm("Do you want numbers?");
+  if (hasNumbers) {
+    masterArray = masterArray.concat(numberChars);
   }
-
-  if (hasUpper) {
-    masterArray.concat(specialChars);
+  var hasSpecial = confirm("Do you want special character?");
+  if (hasSpecial) {
+    masterArray = masterArray.concat(specialChars);
   }
+//code to create password and iterate through the logic
+  var = newPassword = "";
+  console.log(masterArray);
+  for (var i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * masterArray.length);
+    newPassword += masterArray[randomIndex];
+  }
+}
 
   // Write password to the #password input
   function writePassword() {
@@ -45,13 +53,7 @@ function generatePassword() {
 
     passwordText.value = password;
   }
-}
-var newPassword = "";
 
-for (var i = 0; i < passwordLength; i++) {
-  var randomIndex = Math.floor(Math.random() * masterArray.length);
-  newPassword += masterArray[randomIndex];
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
