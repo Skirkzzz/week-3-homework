@@ -1,6 +1,11 @@
 # week-3-homework
 
-This code enables a person to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code.
+## About
+
+```This code enables a person to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code.
+
+It uses Javascript, HTML and CSS
+```
 
 ## User Story
 
@@ -28,4 +33,10 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
+```
+
+## Deployment
+
+```
+The code is deployed in github and is published at https://skirkzzz.github.io/week-3-homework/
 ```
